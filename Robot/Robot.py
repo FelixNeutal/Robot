@@ -30,3 +30,11 @@ class Robot:
     def stop_driving(self):
         self.left_motor.throttle = 0
         self.right_motor.throttle = 0
+
+    def turn_left(self):
+        self.left_motor.throttle = -0.5
+        self.right_motor.throttle = 0.5
+
+    def turn_right(self):
+        self.left_motor.throttle = 0.5
+        self.right_motor.throttle = -0.5

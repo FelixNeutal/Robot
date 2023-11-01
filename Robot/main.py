@@ -1,15 +1,10 @@
 import time
 
+from PS4Controller import MyController
 from Robot import Robot
 
 if __name__ == '__main__':
-    robot = Robot()
-    robot.drive_forward()
-    time.sleep(10)
-    robot.stop_driving()
-    time.sleep(2)
-    robot.drive_backward()
-    time.sleep(10)
-    robot.stop_driving()
+    controller = MyController(interface="/dev/input/js0", connecting_using_ds4drv=False)
+    controller.listen()
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
