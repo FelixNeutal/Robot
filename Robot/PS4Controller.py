@@ -28,7 +28,13 @@ class MyController(Controller):
         self.robot.stop_driving()
 
     def on_x_press(self):
-        self.robot.drive_forward()
+        self.robot.increase_speed()
 
     def on_x_release(self):
-        self.robot.stop_driving()
+        pass
+
+    def on_circle_press(self):
+        self.robot.decrease_speed()
+
+    def on_circle_release(self):
+        pass
